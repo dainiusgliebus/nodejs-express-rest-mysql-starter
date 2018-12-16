@@ -44,20 +44,37 @@ npm start
 
 Local Parameters
 ---------------
-```sh
+```
+# app env mode
 NODE_ENV=development
+# app debug mode
 DEBUG=true
-SERVER_PORT=3000
+# app password secret
 APP_SECRET=itsverysecret
+# server port
+SERVER_PORT=3000
+# jwt secret
 JWT_SECRET=itsverysecret
+# jwt expire time in seconds
 JWT_EXPIRE=3600
 
+# mysql parameters for read and write options
 DB_READ_HOST=localhost
 DB_WRITE_HOST=localhost
 DB_PORT=3306
 DB_DATABASE=database
 DB_USERNAME=root
 DB_PASSWORD=
+```
+
+Routes
+---------------
+```
+
+# login to app to get bearer token
+POST /auth/login 
+# validate bearer token
+GET  /auth/me
 ```
 
 License
