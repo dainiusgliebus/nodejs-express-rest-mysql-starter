@@ -3,8 +3,12 @@ Express Mysql REST API Boilerplate
 
 This is a simple boilerplate to start building REST API with Express.
 
+- dotenv support via [dotenv](https://github.com/motdotla/dotenv)
 - CORS support via [cors](https://github.com/troygoode/node-cors)
-- gzip support via [cors](https://github.com/expressjs/compression)
+- gzip support via [compression](https://github.com/expressjs/compression)
+- crypto support via [crypto-js](https://github.com/brix/crypto-js)
+- JWT token support via [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
+- mysql2 support via [mysql2](https://github.com/sidorares/node-mysql2)
 
 
 Getting Started
@@ -38,6 +42,23 @@ npm run dev
 npm start
 ```
 
+Local Parameters
+---------------
+```sh
+NODE_ENV=development
+DEBUG=true
+SERVER_PORT=3000
+APP_SECRET=itsverysecret
+JWT_SECRET=itsverysecret
+JWT_EXPIRE=3600
+
+DB_READ_HOST=localhost
+DB_WRITE_HOST=localhost
+DB_PORT=3306
+DB_DATABASE=database
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
 License
 -------
