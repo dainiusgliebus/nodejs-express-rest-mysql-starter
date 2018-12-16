@@ -4,6 +4,7 @@
   "description": "Initial setup for rest api",
   "main": "server.js",
   "scripts": {
+    "dev": "nodemon server.js",
     "test": "mocha **/*.test.js",
     "test-watch": "nodemon --exec 'npm test'"
   },
