@@ -7,10 +7,9 @@ const Hash = require('crypto-js/pbkdf2');
 * Returns jwt token if valid email and password is provided
 * @param req
 * @param res
-* @param next
 * @returns {*}
 */
-function login(req, res, next) {
+function login(req, res) {
     
     db_read.query('SELECT id, email, password FROM users where email = ?', [req.body.email], (err, response, fields) => {
         if(!err && response.length === 1){
@@ -44,7 +43,6 @@ function login(req, res, next) {
 * Returns user info
 * @param req
 * @param res
-* @param next
 * @returns {*}
 */
 function me(req, res) {    
@@ -52,7 +50,6 @@ function me(req, res) {
         message: "success",
         data: req.user
     });
-    
 }
 
 module.exports = { login, me };
